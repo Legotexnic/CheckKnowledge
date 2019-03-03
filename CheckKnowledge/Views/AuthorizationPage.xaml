@@ -1,0 +1,21 @@
+﻿<Page x:Class="CheckKnowledge.Views.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CheckKnowledge.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthorizationPage">
+
+    <Grid x:Name="SignInWindow">
+        <TextBox x:Name="Sign_Login" HorizontalAlignment="Left" Height="35" Margin="350,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Login" HorizontalAlignment="Left" Height="35" Margin="248,145,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="35" Margin="248,220,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="Sign_SignInButton" Content="Войти" HorizontalAlignment="Left" Margin="248,297,0,0" VerticalAlignment="Top" Width="145" Height="45" Click="Sign_SignInButton_Click"/>
+        <Button x:Name="Sign_RegistrationButton" Content="Регистрация" HorizontalAlignment="Left" Margin="405,297,0,0" VerticalAlignment="Top" Width="145" Height="45" Click="Sign_RegistrationButton_Click"/>
+        <Label x:Name="SignLogin_Error" HorizontalAlignment="Left" Height="70" Margin="577,145,0,0" VerticalAlignment="Top" Width="194" Foreground="Red"/>
+        <Label x:Name="SignPassword_Error" HorizontalAlignment="Left" Height="35" Margin="577,220,0,0" VerticalAlignment="Top" Width="194" Foreground="Red"/>
+        <PasswordBox x:Name="Sign_Password" HorizontalAlignment="Left" Height="35" Margin="350,220,0,0" VerticalAlignment="Top" Width="200"/>
+    </Grid>
+</Page>

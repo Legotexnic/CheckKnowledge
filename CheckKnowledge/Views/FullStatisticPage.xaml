@@ -1,0 +1,31 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CheckKnowledge.Views"
+      xmlns:CheckKnowledge="clr-namespace:CheckKnowledge" x:Class="CheckKnowledge.Views.FullStatisticPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="FullStatisticPage">
+
+    <Grid x:Name="GameStatisticWindow" Margin="0,0,0,0.4" >
+        <ComboBox Name="NameTest" HorizontalAlignment="Left" Height="68" Margin="10,97,0,0" VerticalAlignment="Top" Width="224"/>
+        <Button Name="СhooseButton_Click" Content="Выбрать" HorizontalAlignment="Left" Height="68" Margin="570,97,0,0" VerticalAlignment="Top" Width="206" Click="ChooseButton_Click"/>
+        <Label Content="Название теста" HorizontalAlignment="Left" Height="26" Margin="10,62,0,0" VerticalAlignment="Top" Width="224"/>
+        <DataGrid x:Name="DataGrid" IsReadOnly="True" ItemsSource="{Binding lsit}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="319" Margin="10,197,0,0" VerticalAlignment="Top" Width="766">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название теста" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Правильных ответов" Binding="{Binding RightAnswer}"/>
+                <DataGridTextColumn Header="Всего ответов" Binding="{Binding Count}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="NameUser" HorizontalAlignment="Left" Height="68" Margin="298,97,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="ФИО Студента" HorizontalAlignment="Left" Height="30" Margin="297,58,0,0" VerticalAlignment="Top" Width="222"/>
+        <Button Content="Добавить тест" HorizontalAlignment="Left" Margin="447,10,0,0" VerticalAlignment="Top" Width="165" Height="26" Click="AddTestButton_Click" RenderTransformOrigin="-0.092,0.782"/>
+        <Button Content="Сменить пользователя" Click="ChangeUser_Button_Click" HorizontalAlignment="Left" Height="26" Margin="617,10,0,0" VerticalAlignment="Top" Width="159"/>
+        <Label Name="UserInfo" HorizontalAlignment="Left" Height="53" Margin="10,0,0,0" VerticalAlignment="Top" Width="432" RenderTransformOrigin="0.629,1.213" FontWeight="Bold" FontSize="16"/>
+    </Grid>
+</Page>
